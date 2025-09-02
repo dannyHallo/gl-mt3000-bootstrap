@@ -1,28 +1,43 @@
-# 重置 SSH 链接
+# GL MT3000 Bootstrap guide
 
-C:/Users/<user_name>/.ssh/known_hosts
+## References
 
-# 建立路由器和电脑的 ssh 连接
+<https://didiboy0702.gitbook.io/wukongdaily/new-shou-ye/mt3000-bu-shua-ji-shi-yong-zhi-nan>
+<https://cafe.cpolar.cn/wkdaily/gl-inet-onescript/src/branch/master>
 
+## Connect with SSH
+
+- If connected previously, remove the host first from `C:/Users/<user_name>/.ssh/known_hosts`
+
+```zsh
 ssh root@192.168.8.1
+```
 
-# 使用脚本切换到 iStore 风格
+## Switch to iStore theme
 
-https://cafe.cpolar.cn/wkdaily/gl-inet-onescript/src/branch/master
+- make sure the time zone is correct
 
-wget -O gl-inet.sh https://cafe.cpolar.cn/wkdaily/gl-inet-onescript/raw/branch/master/gl-inet.sh && chmod +x gl-inet.sh && ./gl-inet.sh
+```zsh
+wget -O gl-inet.sh https://cafe.cpolar.top/wkdaily/gl-inet-onescript/raw/branch/master/gl-inet.sh && chmod +x gl-inet.sh && ./gl-inet.sh
+```
 
-there's also a copy at ./gl-inet.sh
+- Selete option 1 （一键风格化）
 
-选择选项 1 （一键风格化）
+- Do not close the shell before it completed with successful notification like below.
 
-https://didiboy0702.gitbook.io/wukongdaily/new-shou-ye/mt3000-bu-shua-ji-shi-yong-zhi-nan
+```zsh
+恭喜您!现在你的路由器已经变成iStoreOS风格啦!
+现在您可以访问8080端口 查看是否生效 http://192.168.8.1:8080
+更多up主项目和动态 请务必收藏我的导航站 https://tvhelper.cpolar.top
+赞助本项目作者 https://wkdaily.cpolar.top/01
+```
 
-# 安装 OpenClash
+## Install OpenClash
 
 Luci - iStore - 手动安装
 
-- 对应的卸载方式
+## Uninstall Openclash
+You can use this command to uninstall, but keep in mind that the configs will not be cleaned up completely, it's recommended to reset the router directly.
 
 ```zsh
 # see all installed packages (including manual installations)
@@ -32,7 +47,7 @@ opkg list-installed
 opkg remove luci-app-openclash
 ```
 
-# OpenClash 配置
+## OpenClash 配置
 
 配置订阅
 https://45.137.181.239/api/v1/client/subscribe?token=043a2abc9bfa49508303dc70a644c9ba
@@ -58,4 +73,5 @@ Config Subscribe - 配置 Clash 订阅信息
 保存配置 - 更新配置
 
 启动 OpenClash
+
 
