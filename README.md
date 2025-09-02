@@ -49,8 +49,11 @@ opkg remove luci-app-openclash
 
 ## OpenClash 配置
 
-配置订阅
-https://45.137.181.239/api/v1/client/subscribe?token=043a2abc9bfa49508303dc70a644c9ba
+Config subscribe - config - 保存配置 - 更新配置
+
+Follow KISS principle, you are done now.
+
+Here's a way to optimize, but it doesn't work in my case now.
 
 加速
 Plugin Settings - 模式设置 - 最下方 切换页面到 Fake-IP 模式
@@ -73,5 +76,6 @@ Config Subscribe - 配置 Clash 订阅信息
 保存配置 - 更新配置
 
 启动 OpenClash
+
 
 
