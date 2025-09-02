@@ -22,6 +22,16 @@ https://didiboy0702.gitbook.io/wukongdaily/new-shou-ye/mt3000-bu-shua-ji-shi-yon
 
 Luci - iStore - 手动安装
 
+- 对应的卸载方式
+
+```zsh
+# see all installed packages (including manual installations)
+opkg list-installed
+
+# remove this one
+opkg remove luci-app-openclash
+```
+
 # OpenClash 配置
 
 配置订阅
@@ -48,3 +58,4 @@ Config Subscribe - 配置 Clash 订阅信息
 保存配置 - 更新配置
 
 启动 OpenClash
+
